@@ -60,7 +60,7 @@ public class Collections {
 		//no duplicates
 		teamTreeWins.put( "Michigan Wolverines", 940);
 		
-		System.out.println(teamTreeWins);
+		System.out.println("This is a sorted Map" + teamTreeWins + "\n");
 		//queue
 		Queue<Integer> q = new LinkedList<>();
 	    for (int i=0; i<10; i++) 
@@ -71,7 +71,7 @@ public class Collections {
 	  
 	    // Removes first element of queue. 
 	    int remove = q.remove(); 
-	    System.out.println("removed element: " + remove); 
+	    System.out.println("Removed element: " + remove); 
 	  
 	    System.out.println(q); 
 	
