@@ -25,11 +25,11 @@ public class Collections {
 		
 		//unordered set
 		HashSet teamsSet = new HashSet(teamsList);
-		System.out.println("This is an unordered HashSet: " + teamsSet);
+		System.out.println("This is an unordered Set: " + teamsSet);
 		
 		//ordered set
 		TreeSet teamsTree = new TreeSet(teamsList);
-		System.out.println("This is an ordered TreeSet: " + teamsTree);
+		System.out.println("This is an ordered Set: " + teamsTree);
 		teamsList.add("BYU Cougars");
 	}
 }
