@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Random;
 import java.util.TreeSet;
 
 public class Collections {
@@ -18,8 +19,6 @@ public class Collections {
 
 		String[] teams = { "Michigan Wolverines", "BYU Cougars", "Texas Longhorns", "LSU Tigers" };
 
-		// cannot add to a standard array
-		//teams.add("Georgia Bulldogs");
 		System.out.println("This is a standard array: " + teams + "\n");
 
 		//populate list with teams in array
@@ -36,7 +35,6 @@ public class Collections {
 		//populate set with list elements. HashSet is an unordered set 
 		Set<String> teamsSet = new HashSet<String>(teamsList);
 		System.out.println("This is an unsorted Set: " + teamsSet + "\n");
-		
 		//sorted set
 		TreeSet<String> teamsTree = new TreeSet<String>(teamsList);
 		System.out.println("This is a sorted Set: " + teamsTree + "\n");
@@ -59,6 +57,7 @@ public class Collections {
 		teamTreeWins.put( "Notre Dame Fighting Irish", 900);
 		//no duplicates
 		teamTreeWins.put( "Michigan Wolverines", 940);
+		
 		
 		System.out.println("This is a sorted Map" + teamTreeWins + "\n");
 		//queue
