@@ -2,7 +2,7 @@ package threadLock;
 public class Lock {
 	private int count = 0;
 	
-	//use a synchronized lock to lock count integer
+	//use a synchronized lock to keep ensure count is incremented accurately
 	public synchronized void increment() {
 		count++;
 	}

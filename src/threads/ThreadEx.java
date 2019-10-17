@@ -1,7 +1,7 @@
 package threads;
 
 class ThreadEx extends Thread {
-	// for the thread to execute code it has to me inside the run method
+	// for the thread to execute code it has to be inside the run method
 	public void run() {
 		for (int i = 0; i < 15; i++) {
 			System.out.println("Hello, iteration #" + i);
