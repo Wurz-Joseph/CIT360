@@ -26,22 +26,14 @@ public class UpdateTeam {
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			
-			// retrieve student based on the id: primary key
+			// retrieve team based on the id: primary key
 			System.out.println("\nGetting team with id: " + teamId);
 			
 			Team theTeam = session.get(Team.class, teamId);
 			
-			System.out.println("Updating student...");
+			System.out.println("Updating team...");
 			theTeam.setMascot("Nittany Lions");
 			
-			// commit the transaction
-			session.getTransaction().commit();
-
-			// NEW CODE
-			
-			session = factory.getCurrentSession();
-			session.beginTransaction();
-						
 			// commit the transaction
 			session.getTransaction().commit();
 

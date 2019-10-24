@@ -26,18 +26,18 @@ public class QueryTeam {
 			// start a transaction
 			session.beginTransaction();
 			
-			// query students
+			// query all teams
 			List<Team> theTeams = session.createQuery("from Team").list();
-//			
-//			// display the students
-//			displayTeams(theTeams);
 			
-			// query students: lastName='Doe'
-			theTeams = session.createQuery("from Team t where t.wins > 900").list();
-			
-			// display the students
-			System.out.println("\n\nTeams who have more than 900 wins");
+			// display the teams
 			displayTeams(theTeams);
+			
+			// query teams with > 900 wins
+			List<Team> topTeams = session.createQuery("from Team t where t.wins > 900").list();
+			
+			// display the teams
+			System.out.println("\n\nTeams who have more than 900 wins");
+			displayTeams(topTeams);
 			
 			// commit transaction
 			session.getTransaction().commit();

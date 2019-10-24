@@ -23,10 +23,11 @@ public class CreateTeam {
 		Session session = factory.getCurrentSession();
 		
 		try {			
-			// create a student object
 			System.out.println("Creating new student object...");
+			//arraylist to store the teams
 			List<Team> teamsList = new ArrayList<>();
 			
+			//create teams objects and add them to arraylist
 			teamsList.add(new Team("Michigan", "Wolverines", 958));
 			teamsList.add(new Team("Ohio State", "Buckeyes", 917));
 			teamsList.add(new Team("Texas", "Longhorns", 912));
@@ -41,7 +42,7 @@ public class CreateTeam {
 			// start a transaction
 			session.beginTransaction();
 			
-			// save the student object
+			// save the team objects
 			System.out.println("Saving the student...");
 			for(Team teams : teamsList) {
 			    session.save(teams);

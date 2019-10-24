@@ -21,24 +21,37 @@ public class ReadTeam {
 		
 		try {			
 			// create a student object
-			System.out.println("Creating new student object...");
-			Team tempTeam= new Team("Oregon", "Ducks", 661);
+			System.out.println("Creating new team object...");
+			Team theTeam = new Team("Oregon", "Ducks", 661);
 						
-			// find out the team's id: primary key
-			System.out.println("Saved team. Generated id: " + tempTeam.getId());
+			// start a transaction
+			session.beginTransaction();
 			
-			// now get a new session and start transaction
+			// save the team object
+			System.out.println("Saving the new team...");
+			System.out.println(theTeam);
+			session.save(theTeam);
+			
+			// commit the transaction
+			session.getTransaction().commit();
+			
+			//new code here
+			
+			//find out the primary key of team
+			System.out.println("Saved team generated id of: " + theTeam.getId());
+			
+			// now get new session and start transaction
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			
-			// retrieve team based on the id: primary key
-			System.out.println("\nGetting team with id: " + tempTeam.getId());
+			// retrieve student based on ID: primary key
+			System.out.println("\nGetting team with id: " + theTeam.getId());
 			
-			Team theTeam = session.get(Team.class, tempTeam.getId());
+			Team myTeam = session.get(Team.class, theTeam.getId());
 			
-			System.out.println("Get complete: " + theTeam);
+			System.out.println("Get complete: " + myTeam);
 			
-			// commit the transaction
+			//commit the transaction
 			session.getTransaction().commit();
 			
 			System.out.println("Done!");
