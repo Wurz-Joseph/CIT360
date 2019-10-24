@@ -20,23 +20,25 @@ public class DeleteTeam {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			
 //DELETE WITHOUT HQL QUERY
 			
-//			int teamId = 1002;
-//			
-//			// now get a new session and start transaction
+			int teamId = 1003;
+			
+			// now get a new session and start transaction
 			session = factory.getCurrentSession();
 			session.beginTransaction();
-//			
-//			// retrieve team based on the id: primary key
-//			System.out.println("\nGetting team with id: " + teamId);
-//			
-//			Team theTeam = session.get(Team.class, teamId);
-//			
-//			// delete the team
-//			 System.out.println("Deleting team: " + theTeam);
-//			 session.delete(theTeam);
 			
+			// retrieve team based on the id: primary key
+			System.out.println("\nGetting team with id: " + teamId);
+			
+			Team theTeam = session.get(Team.class, teamId);
+			
+			// delete the team
+			 System.out.println("Deleting team: " + theTeam);
+			 session.delete(theTeam);
+			
+//DELETE USING HQL query
 			// delete team where id=1002
 			System.out.println("Deleting team with id=1002");
 			

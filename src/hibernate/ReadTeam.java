@@ -20,7 +20,7 @@ public class ReadTeam {
 		Session session = factory.getCurrentSession();
 		
 		try {			
-			// create a student object
+			// create a new Team object
 			System.out.println("Creating new team object...");
 			Team theTeam = new Team("Oregon", "Ducks", 661);
 						

@@ -27,10 +27,10 @@ public class QueryTeam {
 			session.beginTransaction();
 			
 			// query all teams
-			List<Team> theTeams = session.createQuery("from Team").list();
-			
-			// display the teams
-			displayTeams(theTeams);
+//			List<Team> theTeams = session.createQuery("from Team").list();
+//			
+//			// display the teams
+//			displayTeams(theTeams);
 			
 			// query teams with > 900 wins
 			List<Team> topTeams = session.createQuery("from Team t where t.wins > 900").list();
