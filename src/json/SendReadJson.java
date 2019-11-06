@@ -22,7 +22,7 @@ public class SendReadJson {
 
 		try (FileWriter file = new FileWriter("team.json")) {
 			// create Gson object
-			Gson gson = new Gson();
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 			System.out.println("Writing JSON to file..");
 			// convert to Json and write to file
