@@ -19,15 +19,16 @@ public class HttpRequest {
 			conn.connect();
 			System.out.println("\nSending 'GET' request to URL : " + url);
 
-			// Get the response code
+			// Get the response code and status
 			int responseCode = conn.getResponseCode();
+			String status = conn.getResponseMessage();
 
 			// exception handling
 			if (responseCode != 200) {
-				throw new RuntimeException("HttpResponseCode: " + responseCode);
+				throw new RuntimeException("HttpResponseCode: " + responseCode + " - " + status);
 			} else {
-				// print statusCode
-				System.out.println("Response code: " + responseCode);
+				// print responseCode and status
+				System.out.println("Response code: " + responseCode +" - " + status);
 				Scanner sc = new Scanner(urlObj.openStream());
 				String inline = "";
 				while (sc.hasNext()) {
