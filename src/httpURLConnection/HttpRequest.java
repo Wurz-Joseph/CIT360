@@ -37,6 +37,7 @@ public class HttpRequest {
 				System.out.println("\nJSON data: ");
 				System.out.println(inline);
 				sc.close();
+				
 
 			}
 
