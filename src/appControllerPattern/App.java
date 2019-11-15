@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class App {
 
+	/*Main method. Prompts for and stores all user input. 
+	 *Calls class depending on what is inputed as the operator*/
 	public static void main(String[] args) {
 		Boolean invalid = false;
 		do {
