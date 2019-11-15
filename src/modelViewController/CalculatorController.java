@@ -3,7 +3,8 @@ package modelViewController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//The controller is the code or logic of the program
+/*The controller is the code or logic of the program. 
+It communicates with model and the view so that our program will actually do something.*/
 public class CalculatorController {
 	
 	private CalculatorView theView;
@@ -23,7 +24,8 @@ public class CalculatorController {
 		public void actionPerformed(ActionEvent arg0) {
 
 
-			int firstNumber, secondNumber = 0;
+			int firstNumber = 0;
+			int secondNumber = 0;
 			
 			try {
 				firstNumber = theView.getFirstNumber();
@@ -34,7 +36,7 @@ public class CalculatorController {
 				theView.setCalcSolution(theModel.getCalculationValue());
 					
 			}
-			
+			//runs if the user doesn't enter 2 integers
 			catch(NumberFormatException e) {
 				theView.displayErrorMessage("Enter 2 Integers");
 			}

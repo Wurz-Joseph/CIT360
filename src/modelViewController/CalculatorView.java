@@ -1,8 +1,9 @@
 package modelViewController;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
-//The view is the user interface
+
+/*The view is the user interface. Without the model and controller it would still be displayed
+but it wouldn't know what to do with user input.*/
 public class CalculatorView extends JFrame {
 	private JTextField firstNumber = new JTextField(10);
 	private JLabel additionLabel = new JLabel("+");
